@@ -15,7 +15,7 @@ Object.extend = function(destination, source) {
   return destination;
 };
 
-if (HTMLCanvasElement.prototype.grid == null) {
+if (HTMLCanvasElement.prototype.show_grid == null) {
   HTMLCanvasElement.prototype.show_grid = function (options) {
     /*
      * Default grid options
@@ -31,16 +31,16 @@ if (HTMLCanvasElement.prototype.grid == null) {
      */
 
     // grid data
-    var distance            = options.distance;
-    var color               = options.color;
+    var distance = options.distance;
+    var color = options.color;
     var i = 0, j = 0;
 
     // canvas data
     var canvas = this;
-    var canvas_height       = canvas.height;
-    var canvas_width        = canvas.width;
-    var context             = canvas.getContext("2d");
-    context.strokeStyle     = options.color
+    var canvas_height = canvas.height;
+    var canvas_width = canvas.width;
+    var context = canvas.getContext("2d");
+    context.strokeStyle = options.color
 
     // mouse position data
     var boundaries = canvas.getBoundingClientRect();
@@ -48,7 +48,6 @@ if (HTMLCanvasElement.prototype.grid == null) {
     var info_container_id = options.info_container_id;
 
     // draw grid
-    var i = 0;
     for(i = 0; i < canvas_width; i += distance) {
       context.beginPath();
       context.moveTo(i + 0.5, 0);
@@ -57,7 +56,6 @@ if (HTMLCanvasElement.prototype.grid == null) {
       context.stroke();
     }
 
-    var j = 0;
     for (j = 0; j <= canvas_height; j += distance ) {
       context.beginPath();
       context.moveTo(0, j + 0.5); 
