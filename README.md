@@ -15,20 +15,20 @@ canvas.show_grid();
 
 ### Options
 
-**color** (default #eee)
+**color** (default #eee)  
 Color for grid lines.
 
-**distance** (default 10)
+**distance** (default 10) 
 Distance between grid lines.
 
-**info_box_id** (default null)
+**info_box_id** (default null)  
 Show cursor coordinates in element with provided id.
 
 ~~~javascript
 var canvas = document.getElementById('canvas');
 canvas.show_grid({
-  color: "#333", // default: #eee
-  distanace: 5,  // default 10px
+  color: "#333",
+  distanace: 5,
   info_box_id: "info_box"
 });
 ~~~
