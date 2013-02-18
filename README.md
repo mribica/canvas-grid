@@ -18,7 +18,7 @@ canvas.show_grid();
 **color** (default #eee)  
 Color for grid lines.
 
-**distance** (default 10) 
+**distance** (default 10px) 
 Distance between grid lines.
 
 **info_box_id** (default null)  
